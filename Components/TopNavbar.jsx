@@ -90,7 +90,7 @@ const TopNavbar = () => {
             <img
               id="toggle-menu"
               src={isDarkMode ? '/pepicons-pencil_menulight.png' : '/Menu.png'}
-              alt=""
+              alt="menu button"
               width={24}
               onClick={handleToggleNavClick}
             />
@@ -98,19 +98,19 @@ const TopNavbar = () => {
             <img
               id="darkModeBtn"
               src={isDarkMode ? '/ph_moon-filllight.png' : '/sun.png'}
-              alt=""
+              alt="darkmode button"
               width={24}
               onClick={handleDarkModeClick}
             />
           </div>
-          <Link href="/">
+          <Link href="/" aria-label="Link to Homepage">
             {" "}
             <div className="logo">
-              <img id="logo" src={isDarkMode ? '/BigdarkLogo.png' : '/Logo.png'} alt="" />
+              <img id="logo" src={isDarkMode ? '/BigdarkLogo.png' : '/Logo.png'} alt="mainlogo" />
             </div>
           </Link>
           <div className="right">
-            <img id="search-button" src={isDarkMode ? '/ri_search-linelight.png' : '/Search.png'} alt="" width={24}
+            <img id="search-button" src={isDarkMode ? '/ri_search-linelight.png' : '/Search.png'} alt="search button" width={24}
               onClick={handleToggleSearchClick}
             />
             
@@ -118,7 +118,7 @@ const TopNavbar = () => {
               id="profile-button"
               onClick={handleProfileClick}
               src={isDarkMode ? '/healthicons_ui-user-profilelight.png' : '/Profile.png'}
-              alt=""
+              alt="profile button"
               width={24}
             />
           </div>

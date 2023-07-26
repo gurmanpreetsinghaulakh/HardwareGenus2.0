@@ -296,7 +296,7 @@ nav li:hover {
 .banner-title {
   position: relative;
   color: var(--body-bg-a);
-  bottom: 130px;
+  bottom: 132px;
   font-size: 12px;
   margin-left: 20px;
   margin-right: 20px;
@@ -689,12 +689,13 @@ footer .follow li {
 .footer .content-top h5 {
   font-size: 17px;
   text-transform: uppercase;
-  color: var(--primary-active);
+  color: var(--body-bg);
   margin-bottom: 15px;
 }
 
 .footer .content-top li {
   margin-top: 10px;
+  opacity: 0.8;
 }
 
 .content-bottom h6 {

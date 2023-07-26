@@ -29,8 +29,9 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
           const timeAgo = getTimeAgo(article.publishedAt);
 
           return (
+            
             <div className="banner" key={index}>
-              <Link href={`/${article.title}`}>
+              <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="banner-thumbnail">
                   <img src={article.urlToImage} alt="" />
                 </div>
@@ -49,12 +50,14 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
                 <div className="published-time">{timeAgo}</div>
               </div>
             </div>
+            
           );
         })}
       </div>
       
     </main>
   );
+  
 };
 
 export default BigBanner;

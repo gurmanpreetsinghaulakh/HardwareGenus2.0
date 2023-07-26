@@ -53,7 +53,7 @@ const Trending = ({ newsData }) => {
 
             return (
               <div className="news data" key={index}>
-                <Link href={`/${article.title}`}>
+                 <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                   <div className="title">{article.title.slice(0, 55)}...</div>
                 </Link>
                 <div className="info-trending">

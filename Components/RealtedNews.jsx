@@ -34,13 +34,13 @@ const RealtedNews = ({ newsData, slugOfNavbar }) => {
           const timeAgo = getTimeAgo(article.publishedAt);
           return (
             <div className="banner" key={index}>
-              <Link href={`/${article.title}`}>
+                <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="banner-thumbnail">
                   <img src={article.urlToImage} alt="" />
                 </div>
               </Link>
               <div className="right">
-              <Link href={`/${article.title}`}>
+              <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                   <div className="underline2" />
                   <div className="banner-title">
                     <h2>{article.title}</h2>

@@ -24,13 +24,13 @@ const SmallBanner = ({ newsData, slugOfNavbar }) => {
 
           return (
             <div className="small-news-boxes data" key={index}>
-              <Link href={`/${article.title}`}>
+             <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="small-thumb">
                   <img src={article.urlToImage} alt="" />
                 </div>
               </Link>
               <div className="info-news">
-              <Link href={`/${article.title}`}>
+              <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                   <div className="title">
                     <h2>{article.title}</h2>
                   </div>
