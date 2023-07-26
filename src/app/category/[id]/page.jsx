@@ -21,7 +21,7 @@ export default async function Home({ params }) {
 
 
     const data = await fetchNewsData();
-    console.log(data)
+    // console.log(data)
     const slugOfNavbar = params.id
     const newsData = data
 

@@ -10,7 +10,7 @@ const SearchNavbar = () => {
 
   const fetchData = async (value) => {
     const newsData = await fetchNewsData();
-    console.log(newsData);
+    // console.log(newsData);
 
     const filteredResults = newsData.articles.filter((article) => {
       return (
@@ -20,7 +20,7 @@ const SearchNavbar = () => {
         article.title.toLowerCase().includes(value.toLowerCase())
       );
     });
-    console.log(filteredResults);
+    // console.log(filteredResults);
     setResults(filteredResults);
   };
 

@@ -7,7 +7,7 @@ import Link from 'next/link';
 import fetchNewsData from '../src/app/api/api';
 
 const BigBanner = ({ newsData, slugOfNavbar }) => {
-  console.log(newsData)
+
   // Extracting the article details from the newsData prop
   const selectedCategoryFromTopNavbar = slugOfNavbar || '';
   const articles = selectedCategoryFromTopNavbar
