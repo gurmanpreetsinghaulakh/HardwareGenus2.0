@@ -20,7 +20,7 @@ article.title.toLocaleLowerCase() === decodedSlug)
 
   return {
     title: decodedTitle,
-    description: filteredArticles?.paraphrased_content.slice(0,400),
+    description: filteredArticles?.paraphrased_content?.slice(0,400),
     keywords: filteredArticles?.meta_tags,
     viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
   }

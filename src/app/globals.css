@@ -1010,11 +1010,12 @@ footer .follow li {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--body-bg);
   text-align: center;
   background-size: cover;
   background-position: center;
   margin-top: 100px;
+  z-index: -1;
 }
 
 
