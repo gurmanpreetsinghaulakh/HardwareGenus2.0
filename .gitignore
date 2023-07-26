@@ -2,8 +2,8 @@
 
 
 /python/myenv/
-/python/newsscraper.py
-/python/newsscraper2.py
+/python/news_scraper.py
+/python/news_scraper2.py
 
 # dependencies
 /node_modules
