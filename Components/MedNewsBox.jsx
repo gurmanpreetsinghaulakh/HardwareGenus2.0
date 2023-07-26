@@ -15,9 +15,9 @@ const MedNewsBox = ({ newsData, slugOfNavbar }) => {
       }).slice(2, 12)
     : newsData.articles.slice(2, 12);
 
-  const handleShare = (title, url) => {
-    shareContent(title, url);
-  };
+    const handleShare = (title, url) => {
+      shareContent(title, url = title);
+    };
 
   return (
     <>

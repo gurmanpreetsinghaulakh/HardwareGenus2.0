@@ -38,9 +38,9 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
     }).slice(12, 13)
     : newsData.articles.slice(12, 13);
 
-  const handleShare = (title, url) => {
-    shareContent(title, url);
-  };
+    const handleShare = (title, url) => {
+      shareContent(title, url = title);
+    };
 
   return (
     <div className="recent-container">

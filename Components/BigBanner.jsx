@@ -18,7 +18,7 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
     : newsData.articles.slice(0, 2);
 
   const handleShare = (title, url) => {
-    shareContent(title, url);
+    shareContent(title, url = title);
   };
 
   return (

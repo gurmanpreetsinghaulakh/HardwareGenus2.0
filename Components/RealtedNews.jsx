@@ -15,9 +15,9 @@ const RealtedNews = ({ newsData, slugOfNavbar }) => {
       }).slice(0, 20)
     : newsData.articles.slice(0, 10);
 
-  const handleShare = (title, url) => {
-    shareContent(title, url);
-  };
+    const handleShare = (title, url) => {
+      shareContent(title, url = title);
+    };
 
   return (
     <>
