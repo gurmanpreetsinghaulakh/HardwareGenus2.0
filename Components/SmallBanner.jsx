@@ -1,7 +1,7 @@
 import React from 'react';
 import { getArticleCategory } from './Filters/categoryFilter';
 import Link from 'next/link';
-
+import Image from 'next/image';
 const SmallBanner = ({ newsData, slugOfNavbar }) => {
   // Extracting the article details from the newsData prop
   const selectedCategoryFromTopNavbar = slugOfNavbar || '';
@@ -15,7 +15,7 @@ const SmallBanner = ({ newsData, slugOfNavbar }) => {
   return (
     <>
       <div className="sub-title" style={{marginTop: 70}}>
-        <img className="deallogo" src="/deal.png" alt="" width="45px" />
+        <Image className="deallogo" src="/deal.png" alt="" width={45} height={45} />
         <h2> Uncovered News</h2>
       </div>
       <div className="small-boxes-head">
@@ -26,7 +26,7 @@ const SmallBanner = ({ newsData, slugOfNavbar }) => {
             <div className="small-news-boxes data" key={index}>
              <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="small-thumb">
-                  <img src={article.urlToImage} alt="" />
+                <Image src={article.urlToImage} alt="article banner" width={300} height={200} />
                 </div>
               </Link>
               <div className="info-news">
@@ -38,14 +38,12 @@ const SmallBanner = ({ newsData, slugOfNavbar }) => {
                 <div className="info-main">
                   <div className="category">{category}</div>
                   <div className="share-btn">
-                    <img src="/Share.png" alt="" width="20px" />
+                    <Image src="/Share.png" alt="" width={20} height={20} />
                   </div>
                   <div className="published-time">
                     {new Date(article.publishedAt).toLocaleString()}
                   </div>
-                  <div className="comment">
-                    <img id="comments" src="/Comments.png" alt="" width="20px" />
-                  </div>
+                  
                 </div>
               </div>
             </div>

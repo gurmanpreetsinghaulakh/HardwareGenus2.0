@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import ToggleNav from './ToggleNav';
 import dispatchDarkModeToggle from './Features/darkModeUrils';
 import SearchNavbar from './Features/SearchNavbar';
-
+import Image from 'next/image';
 
 
 
@@ -87,39 +87,42 @@ const TopNavbar = () => {
         <nav>
           <div className="left">
             {/* Add event handler to toggle the visibility of ToggleNav */}
-            <img
+            <Image
               id="toggle-menu"
               src={isDarkMode ? '/pepicons-pencil_menulight.png' : '/Menu.png'}
               alt="menu button"
               width={24}
+              height={24}
               onClick={handleToggleNavClick}
             />
             {/* Add event handler to toggle dark mode */}
-            <img
+            <Image
               id="darkModeBtn"
               src={isDarkMode ? '/ph_moon-filllight.png' : '/sun.png'}
               alt="darkmode button"
               width={24}
+              height={24}
               onClick={handleDarkModeClick}
             />
           </div>
           <Link href="/" aria-label="Link to Homepage">
             {" "}
             <div className="logo">
-              <img id="logo" src={isDarkMode ? '/BigdarkLogo.png' : '/Logo.png'} alt="mainlogo" />
+              <Image id="logo" src={isDarkMode ? '/BigdarkLogo.png' : '/Logo.png'} alt="mainlogo" width={240} height={120}/>
             </div>
           </Link>
           <div className="right">
-            <img id="search-button" src={isDarkMode ? '/ri_search-linelight.png' : '/Search.png'} alt="search button" width={24}
+            <Image id="search-button" src={isDarkMode ? '/ri_search-linelight.png' : '/Search.png'} alt="search button" width={24} height={24}
               onClick={handleToggleSearchClick}
             />
             
-            <img
+            <Image
               id="profile-button"
               onClick={handleProfileClick}
               src={isDarkMode ? '/healthicons_ui-user-profilelight.png' : '/Profile.png'}
               alt="profile button"
               width={24}
+              height={24}
             />
           </div>
         </nav>

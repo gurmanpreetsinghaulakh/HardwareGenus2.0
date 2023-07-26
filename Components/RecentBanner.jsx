@@ -5,6 +5,7 @@ import { getTimeAgo } from './Features/getTimeAgo'; // Assuming you have a separ
 import { shareContent } from './Features/handleShare';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const RecentBanner = ({ newsData, slugOfNavbar }) => {
   const [isLightMode, setIsLightMode] = useState(false);
@@ -46,7 +47,7 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
     <div className="recent-container">
       <div className="recent-news">
         <div className="img">
-          <img className="recentLogo" src={imageSrc} alt="" width={30} />
+          <Image className="recentLogo" src={imageSrc} alt="" width={30} height={30} />
         </div>
         <div className="title">
           <h2>Recent News</h2>
@@ -61,7 +62,7 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
             <div className="banner" key={index}>
               <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="banner-thumbnail">
-                  <img src={article.urlToImage} alt="" />
+                <Image src={article.urlToImage} alt="article banner" width={1000} height={1000} />
                 </div>
               </Link>
               <div className="centering-recent-banner-info">
@@ -73,7 +74,7 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
                 <div className="banner-info">
                   <div className="category">{category}</div>
                   <div className="share-btn" onClick={() => handleShare(article.title, article.url)}>
-                    <img src="/Share.png" alt="Share" width="20px" />
+                    <Image src="/Share.png" alt="Share" width={20} height={20} />
                   </div>
                   <div className="published-time">{timeAgo}</div>
                 </div>

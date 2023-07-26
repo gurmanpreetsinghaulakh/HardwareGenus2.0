@@ -81,9 +81,11 @@ export default async function Page({ params: { slug } }) {
                   alt="Article"
                   className="article-image"
                   layout="responsive"
+                  objectFit="cover"
+                  loading='lazy'
                   width={100}
                   height={550}
-                  objectFit="cover"
+            
                 />
                 <p>"{article.description.slice(0, 112)} --- <Link style={{ color: 'coral' }} href={article.url}>{article.source.name}</Link> </p>
                 {article.paraphrased_content && typeof article.paraphrased_content === "string" ? (

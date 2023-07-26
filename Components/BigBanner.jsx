@@ -5,6 +5,7 @@ import { getTimeAgo } from './Features/getTimeAgo';
 import { shareContent } from './Features/handleShare';
 import Link from 'next/link';
 import fetchNewsData from '../src/app/api/api';
+import Image from 'next/image';
 
 const BigBanner = ({ newsData, slugOfNavbar }) => {
 
@@ -12,9 +13,9 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
   const selectedCategoryFromTopNavbar = slugOfNavbar || '';
   const articles = selectedCategoryFromTopNavbar
     ? newsData.articles.filter((article) => {
-        const category = getArticleCategory(article.title, article.description);
-        return category === selectedCategoryFromTopNavbar;
-      }).slice(0, 2)
+      const category = getArticleCategory(article.title, article.description);
+      return category === selectedCategoryFromTopNavbar;
+    }).slice(0, 2)
     : newsData.articles.slice(0, 2);
 
   const handleShare = (title, url) => {
@@ -29,11 +30,14 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
           const timeAgo = getTimeAgo(article.publishedAt);
 
           return (
-            
+
             <div className="banner" key={index}>
               <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="banner-thumbnail">
-                  <img src={article.urlToImage} alt="" />
+                  <Image src={article.urlToImage} alt="" width={300} height={300} 
+                   layout="responsive"
+                    objectFit="cover"
+                     />
                 </div>
                 <div className="banner-title">
                   <h2>{article.title}</h2>
@@ -45,19 +49,19 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
                   className="share-btn"
                   onClick={() => handleShare(article.title, article.url)}
                 >
-                  <img src="/Share.png" alt="Share" width="20px" />
+                  <Image src="/Share.png" alt="Share" width={20} height={20} />
                 </div>
                 <div className="published-time">{timeAgo}</div>
               </div>
             </div>
-            
+
           );
         })}
       </div>
-      
+
     </main>
   );
-  
+
 };
 
 export default BigBanner;
