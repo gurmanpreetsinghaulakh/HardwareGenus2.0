@@ -12,7 +12,11 @@ export const metadata = {
   },
   description: 'Welcome to Hardware Genus - Your Ultimate Source for PC Tech Industry News! Stay up-to-date with the latest trends, reviews, and breakthroughs in the world of computer technology. From gaming gear to cutting-edge hardware releases, our expert team brings you unbiased insights and in-depth analysis. Join our community of tech enthusiasts and explore the future of PCs. Get the latest scoop on Hardware Genus, your one-stop destination for all things PC tech. Click now for reliable and genuine reporting on the Homepage!',
   keywords: ['Next.js', 'React', 'JavaScript'],
-  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0",
+  verification: {
+    google: "s4VFYOP86jD8GrEF9MlP_30FQCGNQTpheDuu2axYIPY"
+   
+  }
 }
 
 
