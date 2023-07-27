@@ -163,7 +163,8 @@ p {
 
 
 #logo {
-  width: 250px;
+  max-width: 235px;
+  width: 100%;
   height: 22px;
   vertical-align: middle;
 }
@@ -498,7 +499,7 @@ nav li:hover {
   object-fit: cover;
   border-radius: 20px;
   opacity: 0.9;
-  max-height: 500px;
+  max-height: 1000px;
   height: 100% !important;
 
 }
@@ -619,6 +620,10 @@ nav li:hover {
   color: var(--body-bg);
   gap: 10px;
   width: 400px;
+}
+
+.small-news-boxes:focus {
+  animation: fade 0.3s ease;
 }
 
 .small-news-boxes .info-main {
@@ -1092,7 +1097,29 @@ form button[type="submit"] {
   color: #009688;
 }
 
-/* Additional CSS effects and HTML5 animations can be added here */
+.load-more-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+
+}
+
+.load-more-button{
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.load-more-button:hover {
+ background-color: var(--primary-active);
+ color: white;
+ transition: all 0.2s ease-in-out;
+ filter: drop-shadow(1px 1px);
+ border: none;
+}
+
 
 
 
@@ -1113,10 +1140,12 @@ form button[type="submit"] {
 
   .left img {
     width: 20px;
+    height: 20px;
   }
 
   .right img {
     width: 20px;
+    height: 20px;
   }
 
   .scrollmenu {
@@ -1295,7 +1324,7 @@ form button[type="submit"] {
 
   #logo {
     margin-top: 0px;
-    width: 200px;
+    width: 190px;
     height: 19px;
   }
 
@@ -1527,8 +1556,8 @@ form button[type="submit"] {
 
   #logo {
     margin-top: 0px;
-    width: 130px;
-    height: 12px;
+    width: 160px;
+    height: 15px;
   }
 
 

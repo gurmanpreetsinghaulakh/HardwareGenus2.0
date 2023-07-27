@@ -1,12 +1,15 @@
-
+import dynamic from 'next/dynamic'
 import React from 'react'
 import fetchNewsData from '../api/api'
-import RealtedNews from '../../../Components/RealtedNews'
-import TrendingDown from '../../../Components/TrendingDown'
+// import RealtedNews from '../../../Components/RealtedNews'
+// import TrendingDown from '../../../Components/TrendingDown'
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 
+
+const TrendingDown = dynamic(()=> import('../../../Components/TrendingDown'))
+const RealtedNews = dynamic(()=> import('../../../Components/RealtedNews'))
 
 
 export async function generateMetadata({ params: { slug } }) {

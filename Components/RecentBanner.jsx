@@ -62,7 +62,7 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
             <div className="banner" key={index}>
               <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="banner-thumbnail">
-                <Image src={article.urlToImage} alt="article banner" width={1000} height={1000} />
+                <img src={article.urlToImage} alt="article banner"/>
                 </div>
               </Link>
               <div className="centering-recent-banner-info">

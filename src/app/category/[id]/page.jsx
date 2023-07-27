@@ -31,6 +31,7 @@ export default async function Home({ params }) {
     <>
 
       <main>
+
      
         {newsData && <BigBanner newsData={newsData} slugOfNavbar={slugOfNavbar}  />}
         {newsData && <MedNewsBox newsData={newsData} slugOfNavbar={slugOfNavbar} />}
