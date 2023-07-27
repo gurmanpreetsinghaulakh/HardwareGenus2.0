@@ -39,9 +39,9 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
     }).slice(12, 13)
     : newsData.articles.slice(12, 13);
 
-    const handleShare = (title, url) => {
-      shareContent(title, url = title);
-    };
+  const handleShare = (title, url) => {
+    shareContent(title, url = title);
+  };
 
   return (
     <div className="recent-container">
@@ -49,9 +49,7 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
         <div className="img">
           <Image className="recentLogo" src={imageSrc} alt="" width={30} height={30} />
         </div>
-        <div className="title">
-          <h2>Recent News</h2>
-        </div>
+        <h2>Recent News</h2>
       </div>
       <div className="recent">
         {articles.map((article, index) => {
@@ -59,17 +57,18 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
           const timeAgo = getTimeAgo(article.publishedAt); // Using the getTimeAgo function
 
           return (
-            <div className="banner" key={index}>
+            <div className="banner-recent" key={index}>
               <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
-                <div className="banner-thumbnail">
-                <img src={article.urlToImage} alt="article banner"/>
+                <div className="banner-thumbnail-recent">
+                  <Image id="banner-thumb-img" src={article.urlToImage} alt="article banner" width={0}
+                    height={0}
+                    sizes="100vw"
+                    style={{ maxWidth: 1200, width: '100%', height: 'auto' }} />
                 </div>
               </Link>
-              <div className="centering-recent-banner-info">
-              <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
-                  <div className="banner-title">
-                    <h2>{article.title}</h2>
-                  </div>
+              <div id="centering-recent-banner-info">
+                <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
+                  <h2 className="banner-title">{article.title}</h2>
                 </Link>
                 <div className="banner-info">
                   <div className="category">{category}</div>
@@ -84,6 +83,7 @@ const RecentBanner = ({ newsData, slugOfNavbar }) => {
         })}
       </div>
     </div>
+
   );
 };
 

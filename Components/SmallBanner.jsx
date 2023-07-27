@@ -28,7 +28,7 @@ const SmallBanner = ({ newsData, slugOfNavbar }) => {
 
   return (
     <>
-      <div className="sub-title" style={{ marginTop: 70 }}>
+      <div className="sub-title" style={{ marginTop: 100 }}>
         <Image className="deallogo" src="/deal.png" alt="" width={45} height={45} />
         <h2> Uncovered News</h2>
       </div>
