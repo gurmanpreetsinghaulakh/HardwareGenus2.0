@@ -23,7 +23,7 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
   };
 
   return (
-    <main>
+    <main className='page' >
       <div className="banner-container">
         {articles.map((article, index) => {
           const category = getArticleCategory(article.title, article.description);
