@@ -37,6 +37,7 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
                   <Image src={article.urlToImage} alt="" width={300} height={300} 
                    layout="responsive"
                     objectFit="cover"
+                    loading='eager'
                      />
                 </div>
                 <div className="banner-title">
