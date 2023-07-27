@@ -29,7 +29,7 @@ const MedNewsBox = ({ newsData, slugOfNavbar }) => {
             <div className="banner" key={index}>
                <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="banner-thumbnail">
-                  <Image src={article.urlToImage} alt="" width={300} height={200} />
+                  <Image src={article.urlToImage} alt="article banner" width={300} height={200} />
                 </div>
               </Link>
               <div className="right">

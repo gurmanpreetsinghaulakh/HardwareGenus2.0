@@ -1,13 +1,18 @@
-
+import dynamic from "next/dynamic";
 import BigBanner from "../../Components/BigBanner";
 import MedNewsBox from "../../Components/MedNewsBox";
-import MedNewsBox2 from "../../Components/MedNewsBoxTwo";
-import RecentBanner from "../../Components/RecentBanner";
-import Trending from "../../Components/Trending";
-import SmallBanner from "../../Components/SmallBanner";
-import  fetchNewsData  from "./api/api";
+// import MedNewsBox2 from "../../Components/MedNewsBoxTwo";
+// import RecentBanner from "../../Components/RecentBanner";
+// import Trending from "../../Components/Trending";
+// import SmallBanner from "../../Components/SmallBanner";
 import BackToTop from "../../Components/Features/BackToTop";
+import  fetchNewsData  from "./api/api";
 
+
+const RecentBanner = dynamic(()=> import('../../Components/RecentBanner'))
+const Trending = dynamic(()=> import('../../Components/Trending'))
+const MedNewsBox2 = dynamic(()=> import('../../Components/MedNewsBoxTwo'))
+const SmallBanner = dynamic(()=> import('../../Components/SmallBanner'))
 
 export default async function Home() {
 
