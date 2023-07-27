@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -10,7 +11,7 @@ const Footer = () => {
       <div className="content-top">
         <div className="follow">
           <h5>Follow Us On</h5>
-          {/* <a href=" "> <li><img src="" alt=""> Facebook</li></a> */}
+          {/* <a href=" "> <li><Image src="" alt=""> Facebook</li></a> */}
           <a href="https://www.youtube.com/channel/UCYII-e3_z-lz1-R9JeI-otg">
             {" "}
             <li
@@ -21,7 +22,7 @@ const Footer = () => {
               
               }}
             >
-              <img
+              <Image
                 src="https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png"
                 alt=""
                 width={50}
@@ -30,7 +31,7 @@ const Footer = () => {
               YouTube
             </li>
           </a>
-          {/* <a href=" "> <li><img src="" alt=""> Twitter</li></a> */}
+          {/* <a href=" "> <li><Image src="" alt=""> Twitter</li></a> */}
         </div>
         <div className="topics">
       <h5>Topics</h5>
