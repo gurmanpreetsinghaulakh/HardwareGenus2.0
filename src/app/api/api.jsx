@@ -6,17 +6,17 @@
 // export default async function fetchNewsData() {
 //   const currentDate = new Date();
 //   const currentDate2 = new Date();
-//   currentDate.setDate(currentDate.getDate() -5);
+//   currentDate.setDate(currentDate.getDate() -10);
 //   currentDate2.setDate(currentDate2.getDate() -1);
 //   const dateFrom = currentDate.toISOString().split("T")[0];
 //   const dateTo = currentDate2.toISOString().split("T")[0];
 
-//   const url = `${baseUrl}?domains=tomshardware.com,techradar.com,theverge.com,engadget.com,wccftech.com&from=${dateFrom}&to=${dateTo}&sortBy=${shortBy}&apiKey=${apiKey}`;
+//   const url = `${baseUrl}?domains=techradar.com,theverge.com,engadget.com,wccftech.com&from=${dateFrom}&to=${dateTo}&sortBy=${shortBy}&apiKey=${apiKey}`;
 //   // const url = './data.json';
 //   const res = await fetch(url);
 //   const data = await res.json();
 //   return data
-//   console.log(data)
+
 // }
 
 

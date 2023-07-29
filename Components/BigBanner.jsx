@@ -8,7 +8,7 @@ import fetchNewsData from '../src/app/api/api';
 import Image from 'next/image';
 
 const BigBanner = ({ newsData, slugOfNavbar }) => {
-
+  console.log(newsData)
   // Extracting the article details from the newsData prop
   const selectedCategoryFromTopNavbar = slugOfNavbar || '';
   const articles = selectedCategoryFromTopNavbar
@@ -34,11 +34,7 @@ const BigBanner = ({ newsData, slugOfNavbar }) => {
             <div className="banner" key={index}>
               <Link href={`/${article.title}`} aria-label={`Read More About ${article.title}`}>
                 <div className="banner-thumbnail">
-                  <Image src={article.urlToImage} alt="" width={300} height={300} 
-                   layout="responsive"
-                    objectFit="cover"
-                    loading='eager'
-                     />
+                {article.urlToImage && <Image src={article.urlToImage} alt="" width={300} height={300} layout="responsive" objectFit="cover" loading='eager'/>}
                 </div>
                 <div className="banner-title">
                   <h2>{article.title}</h2>
