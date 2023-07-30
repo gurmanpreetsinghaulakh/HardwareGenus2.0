@@ -13,11 +13,11 @@ const RealtedNews = dynamic(()=> import('../../../Components/RealtedNews'))
 
 
 export async function generateMetadata({ params: { slug } }) {
-
+ 
   const slugMeta = await getData();
   const decodedTitle = decodeURIComponent(slug)
   const decodedSlug = decodeURIComponent(slug).toLocaleLowerCase();
-  // console.log(decodedSlug)
+  // console.log(slug)
 
   const filteredArticles = slugMeta.articles.find((article) =>
     article.title.toLocaleLowerCase() === decodedSlug)
@@ -26,7 +26,13 @@ export async function generateMetadata({ params: { slug } }) {
     title: decodedTitle,
     description: filteredArticles?.paraphrased_content?.slice(0, 400),
     keywords: filteredArticles?.meta_tags,
-    viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+    viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0",
+    creator: 'Sukhmanpreet Singh',
+    publisher: 'Hardware Genus Group',
+  
+    alternates: {
+      canonical: `https://www.hardwaregenus.online/${slug}`,
+    },
   }
 }
 
@@ -99,14 +105,14 @@ export default async function Page({ params: { slug } }) {
                 <div className="mt-after-trending-down">
                   <div className="news-footer">
                     <p className="source">Source: {article.author}, {article.source.name} etc.</p>
-                    <a
+                    <Link
                       href={article.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="read-more"
                     >
                       Read More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
