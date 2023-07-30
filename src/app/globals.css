@@ -43,6 +43,7 @@
 /* Animated BG */
 .page {
   height: 100%;
+  overflow-x: hidden;
 }
 
 .page::before {
@@ -58,6 +59,7 @@
   animation: wave 7s ease-in-out infinite alternate;
   -webkit-animation: wave 7s ease-in-out infinite alternate;
   z-index: -1;
+  overflow-x: hidden;
 }
 
 @keyframes wave {
@@ -119,6 +121,7 @@ a {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   z-index: 1;
+  
 }
 
 .backToTop.visible {
@@ -140,6 +143,7 @@ a {
   -webkit-backdrop-filter: blur(5px);
   /* Safari support */
   animation: fade 0.9s ease;
+  
 }
 
 p {
@@ -245,6 +249,7 @@ p {
   text-align: center;
   text-decoration: none;
   margin-right: 20px;
+  
 }
 
 .scrollmenu li:hover {
@@ -278,6 +283,7 @@ a:hover {
   margin-bottom: 0px;
   padding: 0 40px;
   gap: 50px;
+  
 }
 
 .banner {
@@ -399,6 +405,7 @@ a:hover {
 .small-container .banner {
   display: flex;
   justify-content: center;
+
   max-width: 610px;
   width: 100%;
   margin-bottom: 20px;
@@ -475,6 +482,7 @@ a:hover {
   align-items: center;
   flex-direction: column;
   color: var(--body-bg);
+  overflow-x: hidden;
 }
 
 .recent {
@@ -488,6 +496,7 @@ a:hover {
   margin-top: 50px;
   position: relative;
   max-width: 1200px;
+  min-width: 350px;
   width: 100%;
   flex-direction: column;
   border-radius: 20px;
@@ -496,6 +505,7 @@ a:hover {
 .recent .banner-thumbnail-recent #banner-thumb-img {
   border-radius: 20px;
   opacity: 0.9;
+  
 }
 
 
@@ -683,6 +693,7 @@ footer .follow li {
   -webkit-backdrop-filter: blur(25px);
   /* Safari support */
   flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
 .footer .content-top {
@@ -1120,6 +1131,7 @@ form button[type="submit"] {
   transition: all 0.2s ease-in-out;
   filter: drop-shadow(1px 1px);
   border: none;
+  
 }
 
 
@@ -1521,7 +1533,8 @@ form button[type="submit"] {
 
 
   .recent .banner-recent .banner-title {
-    width: 600px;
+    max-width: 600px;
+    width: 90%;
     bottom: 170px;
     font-size: large;
     bottom: 0;
@@ -1531,7 +1544,7 @@ form button[type="submit"] {
   .recent .banner-recent .banner-info {
     position: relative;
     width: 600px;
-    bottom: 0px;
+    bottom: 10px;
     font-size: large;
 
   }
@@ -1621,7 +1634,7 @@ form button[type="submit"] {
     gap: 0;
   }
 
-  .right {
+  nav .right {
     gap: 0;
   }
 
@@ -1710,6 +1723,14 @@ form button[type="submit"] {
     gap: 10px;
     margin-top: 15px;
     margin-left: 15px;
+  }
+
+  .recent .banner-recent .banner-info {
+    position: relative;
+    width: 600px;
+    bottom: 28px;
+    font-size: large;
+
   }
 
   .underline2 {
