@@ -1,7 +1,7 @@
 import fetchNewsData from '../app/api/api';
 
 export default async function sitemap() {
-  const baseUrl = "https://hardwaregenus.online";
+  const baseUrl = "https://www.hardwaregenus.online";
 
   // Get all articles
   const posts = await fetchNewsData();
