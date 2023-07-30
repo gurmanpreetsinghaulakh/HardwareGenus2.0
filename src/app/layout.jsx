@@ -16,8 +16,10 @@ export const metadata = {
   keywords: ['hardwaregenus', 'hardwaregenus news', 'hardawre genus', 'hardware genus news india', 'hardware genus india', 'gaming news', 'nvidia', 'amd', 'intel'],
   viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0",
   verification: {
-    google: "s4VFYOP86jD8GrEF9MlP_30FQCGNQTpheDuu2axYIPY"
+    google: "CSMiCUgPj96VI3pcu6_vil6u-zSnTsFN2_dzxa41w5I"
+    // google: "s4VFYOP86jD8GrEF9MlP_30FQCGNQTpheDuu2axYIPY"
   },
+
   creator: 'Sukhmanpreet Singh',
   publisher: 'Hardware Genus Group',
 
